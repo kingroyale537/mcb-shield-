@@ -1,0 +1,46 @@
+{
+  "name": "mcp-shield",
+  "version": "1.0.0",
+  "description": "Hardened, sandboxed security gateway & real-time observability proxy for Anthropic's Model Context Protocol (MCP)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-shield": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/cli.ts",
+    "dev": "tsx watch src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "tsx examples/run_demo.ts"
+  },
+  "keywords": [
+    "anthropic",
+    "mcp",
+    "model-context-protocol",
+    "ai-safety",
+    "sandbox",
+    "security-gateway",
+    "llm-agent"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.31.0",
+    "chalk": "6.0.1",
+    "commander": "15.0.0",
+    "uuid": "14.0.2",
+    "ws": "8.22.0",
+    "yaml": "2.9.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "@types/ws": "8.18.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.2"
+  }
+}
